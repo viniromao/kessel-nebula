@@ -24,10 +24,11 @@ const routes: Array<RouteConfig> = [
     component: Game,
   },
   {
-    path: "/curriculumHome",
-    name: "CurriculumHome",
-    component: CurriculumHome,
+    path: "/curriculum",
+    name: "Curriculum",
+    component: Curriculum,
   },
+
   {
     path: "/curriculumGame",
     name: "CurriculumGame",
@@ -38,11 +39,7 @@ const routes: Array<RouteConfig> = [
     name: "CvDaniel",
     component: CvDaniel,
   },
-  {
-    path: "/curriculum",
-    name: "Curriculum",
-    component: Curriculum,
-  },
+
   {
     path: "/canvasTuto",
     name: "CanvasTuto",
