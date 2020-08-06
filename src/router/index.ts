@@ -1,29 +1,59 @@
-import Vue from 'vue'
-import VueRouter, { RouteConfig } from 'vue-router'
-import Home from '../views/Home.vue'
+/** @format */
 
-Vue.use(VueRouter)
+import Vue from "vue";
+import VueRouter, { RouteConfig } from "vue-router";
+import LandingPage from "../components/landing-page/landing-page.vue";
+import Game from "../components/game/game.vue";
+import Curriculum from "../components/curriculum/curriculum.vue";
+import CurriculumHome from "../components/curriculumHome/curriculumHome.vue";
+import CurriculumGame from "../components/curriculumGame/curriculumGame.vue";
+import CvDaniel from "../components/cvdaniel/cvdaniel.vue";
+import CanvasTuto from "../components/canvasTuto/canvasTuto.vue";
 
-  const routes: Array<RouteConfig> = [
+Vue.use(VueRouter);
+
+const routes: Array<RouteConfig> = [
   {
-    path: '/',
-    name: 'Home',
-    component: Home
+    path: "/",
+    name: "LandingPage",
+    component: LandingPage,
   },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  }
-]
+    path: "/game",
+    name: "Game",
+    component: Game,
+  },
+  {
+    path: "/curriculumHome",
+    name: "CurriculumHome",
+    component: CurriculumHome,
+  },
+  {
+    path: "/curriculumGame",
+    name: "CurriculumGame",
+    component: CurriculumGame,
+  },
+  {
+    path: "/cvdaniel",
+    name: "CvDaniel",
+    component: CvDaniel,
+  },
+  {
+    path: "/curriculum",
+    name: "Curriculum",
+    component: Curriculum,
+  },
+  {
+    path: "/canvasTuto",
+    name: "CanvasTuto",
+    component: CanvasTuto,
+  },
+];
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: "history",
   base: process.env.BASE_URL,
-  routes
-})
+  routes,
+});
 
-export default router
+export default router;

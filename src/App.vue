@@ -1,32 +1,50 @@
+<!-- @format -->
+
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+	<div id="app">
+		<router-view />
+	</div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<script>
+export default {};
+</script>
+
+<style lang='scss'>
+@font-face {
+	font-family: goblin-appears;
+	src: url("./assets/Fonts/gamegirl-classic-font/GamegirlClassic-9MVj.ttf");
 }
 
-#nav {
-  padding: 30px;
+@font-face {
+	font-family: ancient-modern-tales;
+	src: url("./assets/Fonts/ancientModernTales/AncientModernTales-a7Po.ttf");
+}
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+body {
+	position: fixed;
+	padding: 0;
+	margin: 0;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
 
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+#app {
+	font-family: Courier;
+
+	height: 100%;
+	width: 100%;
+
+	color: white;
+
+	background: rgb(154, 172, 190);
+	background: linear-gradient(
+		315deg,
+		rgba(0, 43, 85, 1) 0%,
+		rgba(9, 102, 121, 1) 49%,
+		rgba(0, 189, 212, 1) 100%
+	);
 }
 </style>
